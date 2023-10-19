@@ -1,8 +1,8 @@
 [
     {
         "name": "Google URLs",
-        "code": "[...document.querySelectorAll('div.r>a:first-child')].map(n=>n.href)",
-        "onsuccess": "document.location=document.querySelectorAll('a#pnnext')[0].href;"
+        "code": "[...document.querySelectorAll('a')].map(n => n.href).filter(url => !url.includes('.google.com'));",
+        "onsuccess": "document.location=document.querySelectorAll('a#pnnext')[0].href;" // use autoscroll or scroll to end before clicking webpaste to get all urls 
     },
 
     {
